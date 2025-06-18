@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Clothing Selection</title>
+
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../images/icono_inicio.png" id="logo" target="self"></a>
+            <ul>
+                <li><a href="../index.html" class="options" id="inicio">INICIO</a></li>
+                <li><a href="../index.html" class="options" id="shirts">ROPA MASCULINA</a></li>
+                <li><a href="../women/women.html" class="options" id="overalls">ROPA FEMENINA</a></li>
+                <li><a href="minions.html" class="options" id="overalls">ROPA NIÑO/A</a></li>
+            </ul>
+            <div class="profile-menu">
+                <a href="#" id="profile-btn"><img src="../images/user.png" id="profile" alt="Profile"></a>
+                <div class="submenu" id="profile-submenu">
+                    <a href="../signup.html">Regístrate</a>
+                    <a href="../login.html">Ingresar</a>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const btn = document.getElementById('profile-btn');
+
+                    const submenu = document.getElementById('profile-submenu');
+
+                    // Toggle the submenu on button click
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        // Toggle the display of the submenu if it is not already open
+                        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                    });
+
+                    // Close the submenu if clicked outside
+                    document.addEventListener('click', function(e) {
+                        // Check if the click is outside the button and submenu
+                        if (!btn.contains(e.target) && !submenu.contains(e.target)) {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+        </nav>
+    </header>
+
+    <!-- Cuerpo -->
+    <div class="content">
+    <div class="sidebar" id="left"></div>
+    <div class="container">
+        <div class="item">
+            <a href="shirts.html">
+                <img src="../images/minion/remeras/1.jpg" alt="T-shirt">
+            </a>
+            <h3 class="title">Remeras</h3>
+        </div>
+
+        <div class="item">
+            <a href="overalls.html">
+                <img src="../images/minion/buzos/1.jpg" alt="overalls">
+            </a>
+            <h3 class="title">Buzos</h3>
+        </div>
+
+        <div class="item">
+            <a href="pants.html">
+                <img src="../images/minion/pantalon/1.jpg" alt="shorts">
+            </a>
+            <h3 class="title">Pantalones</h3>
+        </div>
+
+        <div class="item">
+            <a href="shorts.html">
+                <img src="../images/minion/cortos/1.jpg" alt="shorts">
+            </a>
+            <h3 class="title">Shorts</h3>
+        </div>
+
+        <div class="item">
+            <a href="shoes.html">
+                <img src="../images/minion/zapatillas/1.jpg" alt="shoes">
+            </a>
+            <h3 class="title">Zapatillas</h3>
+        </div>
+    </div>
+    <div class="sidebar" id="right"></div>
+    </div>
+    <!-- Pie -->
+    <footer>
+        <p>&copy; Nike. Todos los derechos reservados, de uso exclusivamente estudiantil.</p>
+    </footer>
+</body>
+
+</html>

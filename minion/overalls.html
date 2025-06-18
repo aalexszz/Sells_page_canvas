@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Clothing Selection</title>
+
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../images/icono_inicio.png" id="logo" target="self"></a>
+            <ul>
+                <li><a href="../index.html" class="options" id="inicio">INICIO</a></li>
+                <li><a href="../index.html" class="options" id="shirts">ROPA MASCULINA</a></li>
+                <li><a href="../women/women.html" class="options" id="overalls">ROPA FEMENINA</a></li>
+                <li><a href="minions.html" class="options" id="overalls">ROPA NIÑO/A</a></li>
+            </ul>
+            <div class="profile-menu">
+                <a href="#" id="profile-btn"><img src="../images/user.png" id="profile" alt="Profile"></a>
+                <div class="submenu" id="profile-submenu">
+                    <a href="../signup.html">Regístrate</a>
+                    <a href="../login.html">Ingresar</a>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const btn = document.getElementById('profile-btn');
+
+                    const submenu = document.getElementById('profile-submenu');
+
+                    // Toggle the submenu on button click
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        // Toggle the display of the submenu if it is not already open
+                        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                    });
+
+                    // Close the submenu if clicked outside
+                    document.addEventListener('click', function(e) {
+                        // Check if the click is outside the button and submenu
+                        if (!btn.contains(e.target) && !submenu.contains(e.target)) {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            </script>
+        </nav>
+    </header>
+
+    <!-- Cuerpo -->
+    <div class="sidebar" id="left"></div>
+    <div class="container">
+        <div class="item">
+            <img src="../images/minion/buzos/1.jpg" alt="T-shirt">
+            <h4 class="title">Remera Negra/Dorada Deportiva</h4>
+            <h3 class="price">U$D89.99</h3>
+            <p class="description">Remera Negra con detalles dorados para hombre. Portavasos incluído.</p>
+        </div>
+
+        <div class="item">
+            <img src="../images/minion/buzos/2.jpg" alt="T-shirt">
+            <h4 class="title">Remera Blanca/Celeste Deportiva</h4>
+            <h3 class="price">U$D89.99</h3>
+            <p class="description">Remera blanca con detalles en celeste para hombre.</p>
+        </div>
+
+        <div class="item">
+            <img src="../images/minion/buzos/3.jpg" alt="overalls">
+            <h4 class="title">Remera Jordan Blanca/Roja</h4>
+            <h3 class="price">U$D89.99</h3>
+            <p class="description">Remera blanca con logo Jordan Rojo.</p>
+        </div>
+
+        <div class="item">
+            <img src="../images/minion/buzos/4.jpg" alt="overalls">
+            <h4 class="title">Remera Jordan Blanca/Roja</h4>
+            <h3 class="price">U$D89.99</h3>
+            <p class="description">Remera blanca con logo Jordan Rojo.</p>
+        </div>
+
+        <div class="item">
+            <img src="../images/minion/buzos/5.jpg" alt="overalls">
+            <h4 class="title">Remera Jordan Blanca/Roja</h4>
+            <h3 class="price">U$D89.99</h3>
+            <p class="description">Remera blanca con logo Jordan Rojo.</p>
+        </div>
+
+        <div class="item">
+            <img src="../images/minion/buzos/6.jpg" alt="overalls">
+            <h4 class="title">Remera Jordan Blanca/Roja</h4>
+            <h3 class="price">U$D89.99</h3>
+            <p class="description">Remera blanca con logo Jordan Rojo.</p>
+        </div>
+    </div>
+    <div class="sidebar" id="right"></div>
+    
+    <!-- Pie -->
+    <footer>
+        <p>&copy; Nike. Todos los derechos reservados, de uso exclusivamente estudiantil.</p>
+    </footer>
+</body>
+
+</html>
